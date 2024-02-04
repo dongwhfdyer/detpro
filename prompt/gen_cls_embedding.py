@@ -32,3 +32,10 @@ elif dataset == 'voc':
 elif dataset == 'coco':
     model = coop_mini.CustomCLIP(COCO_CLASSES, clip_model, False, prompt).to('cuda')
     checkpoint(model, save_name, COCO_CLASSES)
+
+
+## kuhn question:
+# The prompt were generated half in random initialization? How could this inference results be used?
+
+## gpt's answer:
+# it's possible that the prompt embeddings can be further fine-tuned or trained in other parts of the codebase.

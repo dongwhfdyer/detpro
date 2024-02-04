@@ -148,6 +148,8 @@ class PromptLearner(nn.Module):
         
         prefix = self.token_prefix
         suffix = self.token_suffix
+
+        # it determines the position of class token : end or middle or front?
         if self.class_token_position == 'end':
             prompts = torch.cat([
                 prefix, # (n_cls, 1, dim)
